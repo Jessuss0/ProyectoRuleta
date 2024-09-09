@@ -10,8 +10,6 @@ import { LoggerMiddleware } from './middleware/logger';
 })
 export class AppModule {
   configure(consumer) {
-    consumer
-      .apply(LoggerMiddleware)
-      .forRoutes('*'); // Aplica el middleware a todas las rutas
+    consumer.apply(LoggerMiddleware).forRoutes('*');
   }
 }
